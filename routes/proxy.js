@@ -19,10 +19,7 @@ async function handleCDNProxy(req, res) {
   }
 }
 
-// 处理npm反代
-router.get('/npm/*', handleCDNProxy);
-
-// 处理gh反代
-router.get('/gh/*', handleCDNProxy);
+// 处理反代
+router.get('/*', handleCDNProxy);
 
 module.exports = router;
